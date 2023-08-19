@@ -2,6 +2,7 @@
 
 #include "Matrix4x4.h"
 #include "Vector3.h"
+#include "math/MyMath.h"
 #include <d3d12.h>
 #include <wrl.h>
 
@@ -45,4 +46,8 @@ struct WorldTransform {
 	/// 行列を転送する
 	/// </summary>
 	void TransferMatrix();
+	/// <summary>
+	/// 行列の更新と転送を行う関数
+	/// </summary>
+	void UpdateMatrix();
 };

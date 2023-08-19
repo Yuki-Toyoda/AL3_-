@@ -22,8 +22,41 @@
     <Filter Include="scene">
       <UniqueIdentifier>{8f83101b-6ce3-4c73-a4d3-5052382dedab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Math">
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{212b57b1-8e3f-4bd7-9f2e-176d83770a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="const">
+      <UniqueIdentifier>{f017213c-acce-4b5a-a04e-c258ca469f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enum">
+      <UniqueIdentifier>{298f889e-628a-449e-a8d0-4e0965dbedb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
       <UniqueIdentifier>{647f4977-924a-4954-923f-5619e5afc9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Object">
+      <UniqueIdentifier>{e0101bf2-858c-4e6b-bb63-499231b3250d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Object\Manager">
+      <UniqueIdentifier>{c5900107-a53b-4f4c-87e5-848fe28e7fdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="collision">
+      <UniqueIdentifier>{886a334d-bbf2-4a73-9237-5120f5cd4289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="camera">
+      <UniqueIdentifier>{79e687bc-e7f6-4855-a524-e0c96c7c1b53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Sprite">
+      <UniqueIdentifier>{78a3e32a-41e4-4753-910d-849965a0c7b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Sprite\Manager">
+      <UniqueIdentifier>{ff43b363-7b74-4aec-9e4d-d299ce0c3a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Particle">
+      <UniqueIdentifier>{35606a50-db5d-4ad6-ba1c-953c111dcb6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Particle\Manager">
+      <UniqueIdentifier>{b12d8b0d-f754-4876-a61b-9c6a3f4b86f7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -41,7 +74,35 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math\MyMath.cpp">
-      <Filter>Math</Filter>
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\BaseManager.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\FPSCamera.cpp">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Object\BaseObject.cpp">
+      <Filter>GameObject\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldTransformEX.cpp" />
+    <ClCompile Include="GameObject\ObjectManager.cpp">
+      <Filter>GameObject\Object\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="collision\CollisonManager.cpp">
+      <Filter>collision</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\SpriteManager.cpp">
+      <Filter>GameObject\Sprite\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Sprite\BaseSprite.cpp">
+      <Filter>GameObject\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\ParticleManager.cpp">
+      <Filter>GameObject\Particle\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Particle\BaseParticle.cpp">
+      <Filter>GameObject\Particle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,22 +179,55 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="math\Matrix4x4.h">
-      <Filter>Math</Filter>
+      <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="math\Vector2.h">
-      <Filter>Math</Filter>
+      <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="math\Vector3.h">
-      <Filter>Math</Filter>
+      <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="math\Vector4.h">
-      <Filter>Math</Filter>
+      <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="scene\GameScene.h">
       <Filter>scene</Filter>
     </ClInclude>
     <ClInclude Include="math\MyMath.h">
-      <Filter>Math</Filter>
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="enum\MyEnum.h">
+      <Filter>enum</Filter>
+    </ClInclude>
+    <ClInclude Include="const\MyConst.h">
+      <Filter>const</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\BaseManager.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\FPSCamera.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Object\BaseObject.h">
+      <Filter>GameObject\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\ObjectManager.h">
+      <Filter>GameObject\Object\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="collision\CollisonManager.h">
+      <Filter>collision</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\SpriteManager.h">
+      <Filter>GameObject\Sprite\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Sprite\BaseSprite.h">
+      <Filter>GameObject\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\ParticleManager.h">
+      <Filter>GameObject\Particle\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Particle\BaseParticle.h">
+      <Filter>GameObject\Particle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

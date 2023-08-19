@@ -1,5 +1,88 @@
 #include "MyMath.h"
 
+float MyMath::Linear(float t, float start, float end, float time) { 
+	return (float)((1.0 - t / time) * start + t / time * end);
+}
+
+int MyMath::Linear(float t, int start, int end, float time) { 
+	return (int)((1.0 - t / time) * (float)start + t / time * (float)end);
+}
+
+Vector3 MyMath::Linear(float t, Vector3 start, Vector3 end, float time) { 
+	// 結果格納用
+	Vector3 result;
+
+	result.x = (float)((1.0 - t / time) * start.x + t / time * end.x);
+	result.y = (float)((1.0 - t / time) * start.y + t / time * end.y);
+	result.z = (float)((1.0 - t / time) * start.z + t / time * end.z);
+
+	return result;
+}
+
+float MyMath::Linear(float t, float start, float end) { 
+	return (float)((1.0 - t) * start + t * end);
+}
+
+int MyMath::Linear(float t, int start, int end) { 
+	return (int)((1.0 - t) * (float)start + t * (float)end);
+}
+
+float MyMath::EaseIn(float t, float start, float end, float time) { 
+	float easeT = t * t;
+	return (float)((1.0 - easeT / time) * start + easeT / time * end);
+}
+
+int MyMath::EaseIn(float t, int start, int end, float time) { 
+	float easeT = t * t;
+	return (int)((1.0 - easeT / time) * (float)start + easeT / time * (float)end);
+}
+
+Vector3 MyMath::EaseIn(float t, Vector3 start, Vector3 end, float time) { 
+	// 結果格納用
+	Vector3 result;
+
+	float easeT = t * t;
+
+	result.x = (float)((1.0 - easeT / time) * start.x + easeT / time * end.x);
+	result.y = (float)((1.0 - easeT / time) * start.y + easeT / time * end.y);
+	result.z = (float)((1.0 - easeT / time) * start.z + easeT / time * end.z);
+
+	return result;
+}
+
+int MyMath::EaseIn(float t, int start, int end) { 
+	float easeT = t * t;
+	return (int)((1.0 - easeT) * (float)start + easeT * (float)end);
+}
+
+float MyMath::EaseOut(float t, float start, float end, float time) { 
+	float easeT = 1.0f - powf(1.0f - t / time, 3.0f);
+	return (float)((1.0 - easeT) * start + easeT * end);
+}
+
+int MyMath::EaseOut(float t, int start, int end, float time) { 
+	float easeT = 1.0f - powf(1.0f - t / time, 3.0f);
+	return (int)((1.0 - easeT) * (float)start + easeT * (float)end);
+}
+
+Vector3 MyMath::EaseOut(float t, Vector3 start, Vector3 end, float time) { 
+	// 結果格納用
+	Vector3 result;
+
+	float easeT = 1.0f - powf(1.0f - t / time, 3.0f);
+
+	result.x = (float)((1.0 - easeT) * start.x + easeT * end.x);
+	result.y = (float)((1.0 - easeT) * start.y + easeT * end.y);
+	result.z = (float)((1.0 - easeT) * start.z + easeT * end.z);
+
+	return result;
+}
+
+int MyMath::EaseOut(float t, int start, int end) { 
+	float easeT = 1.0f - powf(1.0f - t, 3.0f);
+	return (int)((1.0 - easeT) * (float)start + easeT * (float)end);
+}
+
 float MyMath::Dot(const Vector3& v1, const Vector3& v2) {
 	// 結果格納用
 	float result;
@@ -350,3 +433,4 @@ Matrix4x4 MyMath::MakeViewportMatrix(
 
 	return result;
 }
+

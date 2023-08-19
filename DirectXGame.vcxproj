@@ -109,9 +109,19 @@
     <ClCompile Include="2d\ImGuiManager.cpp" />
     <ClCompile Include="base\DirectXCommon.cpp" />
     <ClCompile Include="base\WinApp.cpp" />
+    <ClCompile Include="Camera\FPSCamera.cpp" />
+    <ClCompile Include="collision\CollisonManager.cpp" />
+    <ClCompile Include="GameObject\BaseManager.cpp" />
+    <ClCompile Include="GameObject\ObjectManager.cpp" />
+    <ClCompile Include="GameObject\Object\BaseObject.cpp" />
+    <ClCompile Include="GameObject\ParticleManager.cpp" />
+    <ClCompile Include="GameObject\Particle\BaseParticle.cpp" />
+    <ClCompile Include="GameObject\SpriteManager.cpp" />
+    <ClCompile Include="GameObject\Sprite\BaseSprite.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math\MyMath.cpp" />
     <ClCompile Include="scene\GameScene.cpp" />
+    <ClCompile Include="WorldTransformEX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2d\ImGuiManager.h" />
@@ -137,6 +147,17 @@
     <ClInclude Include="base\StringUtility.h" />
     <ClInclude Include="base\TextureManager.h" />
     <ClInclude Include="base\WinApp.h" />
+    <ClInclude Include="Camera\FPSCamera.h" />
+    <ClInclude Include="collision\CollisonManager.h" />
+    <ClInclude Include="const\MyConst.h" />
+    <ClInclude Include="enum\MyEnum.h" />
+    <ClInclude Include="GameObject\BaseManager.h" />
+    <ClInclude Include="GameObject\ObjectManager.h" />
+    <ClInclude Include="GameObject\Object\BaseObject.h" />
+    <ClInclude Include="GameObject\ParticleManager.h" />
+    <ClInclude Include="GameObject\Particle\BaseParticle.h" />
+    <ClInclude Include="GameObject\SpriteManager.h" />
+    <ClInclude Include="GameObject\Sprite\BaseSprite.h" />
     <ClInclude Include="input\Input.h" />
     <ClInclude Include="math\Matrix4x4.h" />
     <ClInclude Include="math\MyMath.h" />

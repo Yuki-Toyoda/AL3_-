@@ -11,9 +11,18 @@ void GameScene::Initialize() {
 	dxCommon_ = DirectXCommon::GetInstance();
 	input_ = Input::GetInstance();
 	audio_ = Audio::GetInstance();
+
+	// ベースマネージャのインスタンス取得
+	baseManager_ = BaseManager::GetInstance();
+	// ベースマネージャ初期化
+	baseManager_->Initialize();
+
 }
 
-void GameScene::Update() {}
+void GameScene::Update() {
+	// ベースマネージャ更新
+	baseManager_->Update();
+}
 
 void GameScene::Draw() {
 
@@ -42,6 +51,9 @@ void GameScene::Draw() {
 	/// ここに3Dオブジェクトの描画処理を追加できる
 	/// </summary>
 
+	// ベースマネージャ描画
+	baseManager_->Draw();
+
 	// 3Dオブジェクト描画後処理
 	Model::PostDraw();
 #pragma endregion
@@ -53,6 +65,9 @@ void GameScene::Draw() {
 	/// <summary>
 	/// ここに前景スプライトの描画処理を追加できる
 	/// </summary>
+
+	// スプライト描画
+	baseManager_->SpriteDraw();
 
 	// スプライト描画後処理
 	Sprite::PostDraw();
